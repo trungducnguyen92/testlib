@@ -1,5 +1,5 @@
 // vars/evenOrOdd.groovy
-def call1(int buildNumber) {
+def call(int buildNumber) {
   if (buildNumber % 2 == 0) {
     pipeline {
       agent any
