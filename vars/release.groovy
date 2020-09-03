@@ -15,6 +15,6 @@ def call() {
                 [$class: 'CleanBeforeCheckout'],
             ]     
         ])
-        scmVars.put('testlib', repoScmVars)
+        //scmVars.put('testlib', repoScmVars)
     }
 }
