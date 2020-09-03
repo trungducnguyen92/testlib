@@ -1,4 +1,4 @@
-def call(release, scm) {
+def call() {
 
     checkout scm
 
