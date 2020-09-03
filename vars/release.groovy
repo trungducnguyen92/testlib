@@ -11,9 +11,9 @@ def call() {
             $class: 'GitSCM',
             branches: [[name: "master"]], 
             browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/canhnp/testlib.git'],
-            extensions: [
-                [$class: 'CleanBeforeCheckout'],
-            ]     
+           // extensions: [
+            //    [$class: 'CleanBeforeCheckout'],
+           // ]     
         ])
         //scmVars.put('testlib', repoScmVars)
     }
