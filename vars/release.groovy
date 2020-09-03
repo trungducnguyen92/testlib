@@ -13,7 +13,7 @@ def call(release, scm) {
             browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/canhnp/testlib.git'],
             extensions: [
                 [$class: 'CleanBeforeCheckout'],
-               
+            ]     
         ])
         scmVars.put('testlib', repoScmVars)
     }
