@@ -7,8 +7,10 @@ echo "build id: ${currentBuild.getNumber()}"
 echo "result: ${currentBuild.getResult()}"
 */
 
-evenOrOdd(currentBuild.getNumber())
+//evenOrOdd(currentBuild.getNumber())
 //evenOrOdd(currentBuild.number()) // error https://opensource.triology.de/jenkins/pipeline-syntax/globals
+
+
 echo "current result: ${currentBuild.getCurrentResult()}"
 
 
@@ -22,6 +24,8 @@ pipeline {
                     log.info 'Starting'
                     log.warning 'Nothing to do!'
                 }
+                sayHello 'Joe'
+                sayHello() /* invoke with default arguments */
             }
         }
     }
