@@ -13,6 +13,7 @@ echo "result: ${currentBuild.getResult()}"
 
 //echo "current result: ${currentBuild.getCurrentResult()}"
 
+def myurl
 
 pipeline {
     agent none
@@ -21,9 +22,9 @@ pipeline {
             steps {
                 // log.info 'Starting' 
                 script { 
-                    myurl = url()
-                    echo $myurl
-                    println "[INFO] This is my url: ${url}"
+                    myurl = url 'https://github.com/canhnp/testlib.git'
+                    echo "${myurl}"
+                    println "[INFO] This is my url: ${myurl}"
                     //log.info 'Starting'
                     //log.warning 'Nothing to do!'
                 }
