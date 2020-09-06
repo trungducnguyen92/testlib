@@ -11,7 +11,7 @@ echo "result: ${currentBuild.getResult()}"
 //evenOrOdd(currentBuild.number()) // error https://opensource.triology.de/jenkins/pipeline-syntax/globals
 
 
-echo "current result: ${currentBuild.getCurrentResult()}"
+//echo "current result: ${currentBuild.getCurrentResult()}"
 
 
 pipeline {
@@ -21,11 +21,14 @@ pipeline {
             steps {
                 // log.info 'Starting' 
                 script { 
-                    log.info 'Starting'
-                    log.warning 'Nothing to do!'
+                    myurl = url()
+                    echo $myurl
+                    println "[INFO] This is my url: ${url}"
+                    //log.info 'Starting'
+                    //log.warning 'Nothing to do!'
                 }
-                sayHello 'Joe'
-                sayHello() /* invoke with default arguments */
+                //sayHello 'Joe'
+                //sayHello() /* invoke with default arguments */
             }
         }
     }
