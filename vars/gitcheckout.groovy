@@ -5,7 +5,7 @@ def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
         stage('Even Stage') {
           steps {
 	    echo "Your repo url is: ${mygiturl}"
-	    ls -a
+	    sh 'ls -a'
         }
       }
     }
