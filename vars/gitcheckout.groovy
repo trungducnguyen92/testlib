@@ -1,12 +1,3 @@
-def mygiturl
-
-pipeline {
-    agent master
-    stages {
-        stage('Checkout git'){
-            steps {
-		        echo "test"
-            }
-        }
-    }
+def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
+	echo "Your repo url is: ${mygiturl}
 }
