@@ -1,3 +1,12 @@
-def call(String name = 'human') {
-    echo "Hello, ${name}."
+def mygiturl
+
+pipeline {
+    agent master
+    stages {
+        stage('Checkout git'){
+            steps {
+		        echo "test"
+            }
+        }
+    }
 }
