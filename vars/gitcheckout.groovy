@@ -1,14 +1,11 @@
-def mygiturl
-
-pipeline {
-	agent master
-	stages {
-		stage('Checkout git'){
-			steps {
-				script {
-					echo "Repository URL is:"
-				}
-			}
-		}
-	}
-}
+def call(string myurl) {
+    pipeline {
+      agent master
+      stages {
+        stage('Checkoutgit') {
+          steps {
+		  echo "The build number is even ${myurl}"
+          }
+        }
+      }
+    }
