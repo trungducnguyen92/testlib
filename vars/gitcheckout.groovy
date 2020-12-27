@@ -7,7 +7,7 @@ def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
 	    echo "Your repo url is: ${mygiturl}"
 	    echo "Now cloning the repository"
 	    sh 'git clone https://github.com/trungducnguyen92/Test_repo.git'
-	    sh 'cd Test_repo/'
+	    sh 'cd /var/lib/jenkins/workspace/exercise-git-checkout/Test_repo/'
 	    sh 'ls -a'
         }
       }
