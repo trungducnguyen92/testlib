@@ -1,4 +1,4 @@
-def call(String mygiturl){
+def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
     pipeline {
       agent any
       stages {
@@ -7,7 +7,7 @@ def call(String mygiturl){
 	    echo "Your repo url is: ${mygiturl}"
 	    echo "Now cloning the repository"
 	    sh '''
-	    git clone ${mygiturl}
+	    git clone https://github.com/trungducnguyen92/Test_repo.git
 	    cd /var/lib/jenkins/workspace/exercise-git-checkout/Test_repo
 	    ls -l
 	    git checkout test1
