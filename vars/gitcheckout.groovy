@@ -8,7 +8,7 @@ def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
 	    echo "Now cloning the repository"
 	    sh '''
 	    git clone https://github.com/trungducnguyen92/Test_repo.git
-	    cd Test_repo/
+	    cd /var/lib/jenkins/workspace/exercise-git-checkout/Test_repo
 	    ls -l
 	    git checkout test1
 	    git branch
