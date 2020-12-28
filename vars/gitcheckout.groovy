@@ -1,4 +1,4 @@
-def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
+def call(String mygiturl){
     pipeline {
       agent any
       stages {
