@@ -6,12 +6,13 @@ def call(String mygiturl = 'https://github.com/trungducnguyen92/Test_repo.git'){
           steps {
 	    echo "Your repo url is: ${mygiturl}"
 	    echo "Now cloning the repository"
-	    sh 'cd /home/test'
-	    sh 'git clone https://github.com/trungducnguyen92/Test_repo.git'
-	    sh 'cd Test_repo/'
-	    sh 'ls -l'
-	    /*sh 'git checkout test1'*/
-	    /*sh 'git branch'*/
+	    sh '''
+	    git clone https://github.com/trungducnguyen92/Test_repo.git
+	    cd Test_repo/
+	    ls -l
+	    git checkout test1
+	    git branch
+	    '''
         }
       }
     }
